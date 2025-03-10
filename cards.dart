@@ -17,6 +17,10 @@ class Deck {
   toString() {
     return cards.toString();
   }
+
+  shuffle() {
+    cards.shuffle();
+  }
 }
 
 class Card {
@@ -32,5 +36,6 @@ class Card {
 
 void main() {
    var deck = new Deck();
+   deck.shuffle();
    print(deck);
 }
