@@ -21,6 +21,12 @@ class Deck {
   shuffle() {
     cards.shuffle();
   }
+
+  cardsWithSuit(String suit) {
+    return cards.where((card) {
+      return card.suit == suit;
+    });
+  }
 }
 
 class Card {
@@ -37,5 +43,5 @@ class Card {
 void main() {
    var deck = new Deck();
    deck.shuffle();
-   print(deck);
+   print(deck.cardsWithSuit('Clubs'));
 }
